@@ -33,7 +33,7 @@ class Solution(object):
                 print(total, "=", nums[i], nums[l], nums[r])
                 if total == 0:
                     result.append([nums[i], nums[l], nums[r]])
-                    while nums[l] == nums[l+1] and l+r < r:
+                    while nums[l] == nums[l+1] and l+1 < r:
                         l += 1
                     l += 1
                     while nums[r] == nums[r-1] and l < r-1:
@@ -43,11 +43,9 @@ class Solution(object):
                     l += 1
                 else:
                     r -= 1
-            #
-            #print(i)
         return result
             
 a = Solution()
-sol = a.threeSum([1,2,-2,-1])
+sol = a.threeSum([-1, 0, 1, 2, -1, -4])
 print("solution")
 print(sol)
